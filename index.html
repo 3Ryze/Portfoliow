@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryvi | Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Caveat for handwritten style, Outfit for sans-serif -->
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <!-- Profile Picture -->
+        <div class="avatar-container">
+            <img src="pfp.jpg" alt="Ryvi Profile Picture" class="avatar" onerror="this.src='https://ui-avatars.com/api/?name=Ryvi&background=FFC5BD&color=fff&size=150'">
+        </div>
+        
+        <!-- Name -->
+        <h1 class="username">Ryvi</h1>
+        
+        <!-- Separator 1 -->
+        <div class="separator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+
+        <!-- Social Icons Row -->
+        <div class="social-icons">
+            <a href="https://www.youtube.com/@3Ryvi" target="_blank" class="icon-btn" title="YouTube">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <div class="icon-btn copy-discord" onclick="copyDiscord()" title="Discord: 3Ryvi">
+                <i class="fab fa-discord" id="discord-icon"></i>
+            </div>
+            <a href="https://x.com/3Ryvi" target="_blank" class="icon-btn" title="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.twitch.tv/ryviaim" target="_blank" class="icon-btn" title="Twitch">
+                <i class="fab fa-twitch"></i>
+            </a>
+        </div>
+
+        <!-- Main Card -->
+        <div class="main-card">
+            <div class="card-title">Retired Developer</div>
+            <div class="card-subtitle" style="line-height: 1.6; margin-top: 5px;">
+                Experienced in all types of languages like Java, Skript, Python, C, and C++.<br><br>
+                Up and coming Minecraft SMP content creator.
+            </div>
+        </div>
+
+        <!-- Separator 2 -->
+        <div class="separator">
+            <i class="fas fa-chevron-up"></i>
+        </div>
+
+    </main>
+
+    <script>
+        function copyDiscord() {
+            navigator.clipboard.writeText('3Ryvi').then(() => {
+                const icon = document.getElementById('discord-icon');
+                icon.className = 'fas fa-check';
+                
+                setTimeout(() => {
+                    icon.className = 'fab fa-discord';
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
